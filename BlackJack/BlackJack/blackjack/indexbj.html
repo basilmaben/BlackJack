@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>BlackJack</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="">BlackJack 21</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html"> Home</a>
+              
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+    </section>
+
+  <section class="white-section" id="cards">
+
+      <div class="container-fluid">
+  
+       <div>
+      <div>
+       <!--Creating a game start --> 
+         <div id="message">Press Start Button</div>  
+         <div id="start">
+           <button id="btnstart" type="button" onclick="Start()" class="btn btn-success">Start Game</button>
+         </div>
+         <!-- Displaying Starting Bets-->
+  <section class="white-section" id="display">
+
+         <div class="container-fluid">
+      <div>
+         <div class="total">Total $<span id="dollars">10000</span><br>Bet Amount $<input type="number" id="mybet" value="5"
+             min="1" max="10000">
+             <button id="maxbet" type="button" onclick="maxbet()" class="btn">Max Bet</button>
+         </div>
+      </div>
+  <section class="white-section" id="OP">
+
+        <div class="container-fluid">
+     <div>
+         <div id="output">
+          <!-- i.e where all the dealer's and player's card will go -->
+          Dealer Hand : <span id="dValue"></span>
+          <div id="dealerHolder"></div>
+          Player Hand : <span id="pValue"></span>
+          <div id="playerHolder"></div>
+         </div>
+     </div>
+
+   <section class="white-section" id="Buttons">
+
+      <div class="container-fluid">
+    <div>
+       <!-- Adding buttons with click event,all referring to same function with different argument respectively -->
+          <div id="myactions">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" id="btnhold" onclick="cardAction('hold')" class="btn btn-outline-success">Stand</button>
+              <button type="button" id = "btnhit" onclick="cardAction('hit')" class="btn btn-outline-danger">Hit</button>
+              <button type="button" id="btndouble" onclick="cardAction('double')" class="btn btn-outline-info">Double</button>
+            </div>
+          </div>
+          <div>
+            <button id="btndeal" type="button" onclick="dealNew()" class="btn btn-outline-Royal">Deal</button>
+          </div>
+        </div>
+        <script src="blackjack.js"></script>
+        </div>
+   </section>
+  </body>
+  </html>
+
+
+
+
+
+<!--
+ <div>
+     <div>
+      <!--Creating a game start 
+        <div id="message">Press Start Button</div>  
+        <div id="start">
+          <button id="btnstart" type="button" onclick="Start()" class="btn">Start Game</button>
+        </div>
+        <div class="total">Total $<span id="dollars">10000</span><br>Bet Amount $<input type="number" id="mybet" value="5"
+            min="1" max="10000">
+            <button id="maxbet" type="button" onclick="maxbet()" class="btn">Max Bet</button>
+        </div>
+        <div id="output">
+          <!-- i.e where all the dealers's and player's card will go 
+          Dealer Hand : <span id="dValue"></span>
+          <div id="dealerHolder"></div>
+          Player Hand : <span id="pValue"></span>
+          <div id="playerHolder"></div>
+  
+          <!-- Adding buttons with click event,all referring to same function with different argument respectively 
+          <div id="myactions">
+            <button id="btnhold" type="button" onclick="cardAction('hold')" class="btn">Hold</button>
+            <button id="btnhit" type="button" onclick="cardAction('hit')" class="btn">Hit</button>
+            <button id="btndouble" type="button" onclick="cardAction('double')" class="btn">Double</button>
+          </div>
+          <div>
+             <!-- No need to shuffle always on dealing  
+            <button id="btndeal" type="button" onclick="dealNew()" class="btn">Deal</button>
+          </div>
+        </div>
+        <div>
+        </div>
+        <script src="blackjack.js"></script>
+  </body>
+  
+  </html>
